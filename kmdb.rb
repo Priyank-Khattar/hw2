@@ -87,7 +87,7 @@ Role.destroy_all
 new_studio = Studio.new
 new_studio["name"] = "Warner Bros."
 new_studio.save
-#puts "studios: #{Studio.all.count}"
+
 
 studio = Studio.find_by({"name" => "Warner Bros."})
 new_movie = Movie.new
@@ -112,7 +112,6 @@ new_movie["year_released"] = "2012"
 new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = studio["id"]
 new_movie.save
-#puts "movies: #{Movie.all.count}"
 
 
 new_actor = Actor.new
@@ -158,7 +157,7 @@ new_actor.save
 new_actor = Actor.new
 new_actor["name"] = "Ann Hathaway"
 new_actor.save
-#puts "actors: #{Actor.all.count}"
+
 
 movie_1 = Movie.find_by({"title" => "Batman Begins"})
 actor_1 = Actor.find_by({"name" => "Christian Bale"})
